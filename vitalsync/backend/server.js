@@ -2,11 +2,9 @@ const express = require("express");
 const app = express();
 
 app.get("/health", (req, res) => {
-  res.json({
-    status: "ok",
-    timestamp: new Date()
-  });
+  res.json({ status: "ok", version: "2.0", source: "update-health branch" });
 });
+
 
 app.get("/api/activities", (req, res) => {
   res.json([]);
